@@ -1,0 +1,90 @@
+.heading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  color: rgb(253, 253, 252);
+  font-size: 30px;
+  background: linear-gradient(#f70d7a, #f3f706);
+  padding: 16px;
+  margin: 0;
+  text-align: center;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center; 
+  /* min-height: 100vh; */
+  padding-top: 80px; 
+  box-sizing: border-box;
+  background: #fff;
+}
+
+.board-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+
+}
+
+.container {
+  border: 2px solid #333;
+  padding: 4px;
+margin-left: 500px;
+
+  width: fit-content;
+margin-bottom: 8px;
+  flex-grow: 0;
+}
+
+.row {
+  display: flex;
+}
+
+.cell {
+  width: 60px;
+  height: 60px;
+  border: 1px solid #999;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  user-select: none;
+  box-sizing: border-box;
+}
+
+.marked {
+  background-color: #3498db;
+  color: white;
+}
+
+.button-group {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+   margin-top: 8px;
+   margin-left: 500px
+}
+
+.btnRotate,
+.btnRestart {
+  padding: 10px 20px;
+  background-color: #f70d7a;
+  color: #faf8f8;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+
+.btnRestart{
+  background-color: #3498db;
+}
