@@ -1,46 +1,119 @@
-.heading {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  color: rgb(253, 253, 252);
-  font-size: 30px;
-  background: linear-gradient(#f70d7a, #f3f706);
-  padding: 16px;
+/* Обнуляем отступы и задаем флекс для всего тела страницы */
+html,
+body {
   margin: 0;
-  text-align: center;
-  z-index: 1000;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.page {
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  font-family: Arial, sans-serif;
   display: flex;
-  flex-direction: column;
-  align-items: center; 
-  justify-content: center; 
-  /* min-height: 100vh; */
-  padding-top: 80px; 
+  justify-content: center;
+  align-items: center;
+  background-image: url("/tetris-featured.avif");
+  background-size: cover; /* растянуть на весь экран */
+  background-size: 100% 50%; /* ширина 100%, высота 50% */
+  background-position: bottom; /* центрировать */
+  background-repeat: no-repeat;
   box-sizing: border-box;
-  background: #fff;
 }
 
-.board-wrapper {
+/* Основной контейнер страницы */
+.page-wrapper {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
   display: flex;
   flex-direction: column;
-  align-items: center; 
-
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+  background: #fdfdfd;
+  margin-top: -250px;
 }
 
+/* Заголовок */
+.heading {
+  width: 700px;
+  padding: 20px 0;
+  text-align: center;
+  font-size: 36px;
+  font-weight: bold;
+  color: white;
+  background: linear-gradient(90deg, #f70d7a, #f3f706);
+  margin-bottom: 80px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* Меню с двумя кнопками */
+.menu-wrapper {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 40px;
+  margin-top: 10px;
+}
+
+/* Группа кнопок Rotate/Restart/Back */
+.button-group {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+/* Кнопки */
+button {
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  color: white;
+  user-select: none;
+  transition: background-color 0.3s ease;
+}
+
+/* Разные цвета */
+.btnRotate {
+  background-color: #e91e63;
+}
+.btnRotate:hover {
+  background-color: #c2185b;
+}
+
+.btnRestart {
+  background-color: #2196f3;
+}
+.btnRestart:hover {
+  background-color: #1976d2;
+}
+
+.btnBack {
+  background-color: #4caf50;
+}
+.btnBack:hover {
+  background-color: #388e3c;
+}
+
+/* Кнопка back — фиксирована в левом верхнем углу */
+.btnBack {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1001;
+  font-size: 14px;
+  padding: 10px 18px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Контейнер фигур и доски */
 .container {
   border: 2px solid #333;
-  padding: 4px;
-margin-left: 500px;
-
-  width: fit-content;
-margin-bottom: 8px;
-  flex-grow: 0;
+  padding: 10px;
 }
 
+/* Сетка */
 .row {
   display: flex;
 }
@@ -50,41 +123,11 @@ margin-bottom: 8px;
   height: 60px;
   border: 1px solid #999;
   background-color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   cursor: pointer;
-  user-select: none;
   box-sizing: border-box;
+  transition: background-color 0.2s ease;
 }
 
 .marked {
-  background-color: #3498db;
-  color: white;
-}
-
-.button-group {
-  display: flex;
-  gap: 10px;
-  justify-content: center;
-   margin-top: 8px;
-   margin-left: 500px
-}
-
-.btnRotate,
-.btnRestart {
-  padding: 10px 20px;
-  background-color: #f70d7a;
-  color: #faf8f8;
-  font-weight: bold;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
-  transition: background-color 0.3s ease;
-}
-
-
-.btnRestart{
   background-color: #3498db;
 }
