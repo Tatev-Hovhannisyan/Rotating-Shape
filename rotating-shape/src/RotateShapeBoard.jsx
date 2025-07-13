@@ -56,9 +56,15 @@ export default function RotateShapeBoard({ onBack }) {
       </div>
 
       <div className="button-group">
-        <button className="btnRotate" onClick={handleRotateBtnClick}>Rotate</button>
-        <button className="btnRestart" onClick={handleRestartClick}>Restart</button>
-        <button className="btnBack" onClick={onBack}>Back</button>
+        <button className="btnRotate" onClick={handleRotateBtnClick}>
+          Rotate
+        </button>
+        <button className="btnRestart" onClick={handleRestartClick}>
+          Restart
+        </button>
+        <button className="btnBack" onClick={onBack}>
+          Back
+        </button>
       </div>
     </>
   );

@@ -3,7 +3,6 @@ import RotateShapeBoard from "./RotateShapeBoard";
 import RotateShape from "./RotateShape";
 import "./App.css";
 
-
 function App() {
   const [activePage, setActivePage] = useState(null);
 

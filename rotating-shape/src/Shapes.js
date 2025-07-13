@@ -4,7 +4,7 @@ const SHAPES = [
     color: "#f0a",
     shape: [
       [false, true, false],
-      [true,  true, true],
+      [true, true, true],
       [false, false, false],
     ],
   },
@@ -12,8 +12,8 @@ const SHAPES = [
     name: "L",
     color: "#fa0",
     shape: [
-      [true,  false, false],
-      [true,  true,  true],
+      [true, false, false],
+      [true, true, true],
       [false, false, false],
     ],
   },
@@ -22,7 +22,7 @@ const SHAPES = [
     color: "#00f",
     shape: [
       [false, false, true],
-      [true,  true,  true],
+      [true, true, true],
       [false, false, false],
     ],
   },
@@ -38,8 +38,8 @@ const SHAPES = [
     name: "S",
     color: "#0f0",
     shape: [
-      [false, true,  true],
-      [true,  true,  false],
+      [false, true, true],
+      [true, true, false],
       [false, false, false],
     ],
   },
@@ -47,8 +47,8 @@ const SHAPES = [
     name: "Z",
     color: "#f00",
     shape: [
-      [true,  true,  false],
-      [false, true,  true],
+      [true, true, false],
+      [false, true, true],
       [false, false, false],
     ],
   },
@@ -57,15 +57,14 @@ const SHAPES = [
     color: "#0ff",
     shape: [
       [false, false, false, false],
-      [true,  true,  true,  true],
+      [true, true, true, true],
       [false, false, false, false],
       [false, false, false, false],
     ],
   },
 ];
 
-
 export function getRandomShape() {
   const index = Math.floor(Math.random() * SHAPES.length);
-  return SHAPES[index]; 
+  return SHAPES[index];
 }
